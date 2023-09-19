@@ -7,8 +7,8 @@ def call(PipelineParam config) {
         stages {
             stage('build') {
                 steps {
-                    script.sh 'mvn --version'
-                    script.echo "echo ${config.branchName}"
+                    sh 'mvn --version'
+                    echo "echo ${config.branchName}"
                 }
             }
         }
